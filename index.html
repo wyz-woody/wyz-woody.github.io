@@ -1,295 +1,209 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>吴永志 - Java开发工程师</title>
-    <style>
-        /* 基础样式 */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --text-color: #34495e;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            max-width: 1024px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-            background-color: #f8f9fa;
-        }
-
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        /* 打印样式 */
-        @media print {
-            body {
-                padding: 0;
-                font-size: 12pt;
-            }
-            .no-print {
-                display: none;
-            }
-        }
-
-        /* 头部样式 */
-        .header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 3px solid var(--primary-color);
-        }
-
-        .name {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .position {
-            font-size: 1.2rem;
-            color: var(--secondary-color);
-            margin-bottom: 0.8rem;
-        }
-
-        /* 核心信息栏 */
-        .info-bar {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            background: #f0f3f5;
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        /* 主要内容模块 */
-        .section {
-            margin-bottom: 2rem;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .section-title {
-            color: var(--primary-color);
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--secondary-color);
-        }
-
-        /* 工作经历模块 */
-        .job-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .company {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .duration {
-            color: #7f8c8d;
-        }
-
-        .tech-stack {
-            margin: 0.5rem 0;
-            font-style: italic;
-            color: #95a5a6;
-        }
-
-        .achievement-list {
-            list-style: none;
-        }
-
-        .achievement-list li {
-            margin-bottom: 0.8rem;
-            padding-left: 1rem;
-            position: relative;
-        }
-
-        .achievement-list li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-        }
-
-        /* 技能标签 */
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: #ecf0f1;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
-            
-            .job-header {
-                flex-direction: column;
-                gap: 0.3rem;
-            }
-            
-            .info-item {
-                flex: 1 1 100%;
-            }
-        }
-    </style>
+    <meta charset="utf-8" />
+    <title>
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <header class="header">
-        <h1 class="name">吴永志</h1>
-        <div class="position">Java开发工程师 | 8年全栈经验</div>
-        <div class="info-bar">
-            <div class="info-item">
-                📱 189-4117-1221
-            </div>
-            <div class="info-item">
-                📧 wyz_woody@163.com
-            </div>
-            <div class="info-item">
-                🌏 期望城市：大连
-            </div>
-            <div class="info-item">
-                💰 期望薪资：15-20K
-            </div>
-        </div>
-    </header>
-
-    <!-- 核心优势 -->
-    <section class="section">
-        <h2 class="section-title">核心优势</h2>
-        <ul class="achievement-list">
-            <li>8年全栈开发经验，精通Spring生态（Boot/Cloud）、分布式中间件（Redis/Kafka/Nacos）</li>
-            <li>主导3个跨国项目（日本/东南亚/欧洲）交付，需求转化效率提升40%</li>
-            <li>擅长高并发优化，通过代码重构实现系统响应时间降低25%+</li>
-            <li>保险领域专家，具备DDD设计与复杂业务系统架构能力</li>
-        </ul>
-    </section>
-
-    <!-- 工作经历 -->
-    <section class="section">
-        <h2 class="section-title">工作经历</h2>
-        
-        <div class="job-item">
-            <div class="job-header">
-                <span class="company">众安科技（深圳）</span>
-                <span class="duration">2019.11 - 2024.02</span>
-            </div>
-            <div class="tech-stack">技术栈：Spring Cloud Alibaba/MyBatis/Redis/Kafka/MySQL</div>
-            <ul class="achievement-list">
-                <li>主导保险核心系统开发，重构续期续保模块，代码复用率提升40%</li>
-                <li>设计东南亚PFI项目保费计算引擎，支持每月50万+用户动态核算</li>
-                <li>引入SkyWalking实现全链路监控，故障排查效率提升60%</li>
-            </ul>
-        </div>
-
-        <div class="job-item">
-            <div class="job-header">
-                <span class="company">中科软股（北京）</span>
-                <span class="duration">2017.08 - 2019.09</span>
-            </div>
-            <div class="tech-stack">技术栈：Spring Boot/ActiveMQ/MySQL/Redis</div>
-            <ul class="achievement-list">
-                <li>开发"华泰E家"APP，集成人脸识别/电子签名功能，日活用户突破10万</li>
-                <li>设计异步短信预警系统，异常响应时效从小时级降至分钟级</li>
-                <li>2018年度优秀员工（TOP 5%）</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- 技术能力 -->
-    <section class="section">
-        <h2 class="section-title">技术能力</h2>
-        <div class="skill-tags">
-            <span class="skill-tag">Java 8/11</span>
-            <span class="skill-tag">Spring Boot/Cloud</span>
-            <span class="skill-tag">MySQL/Oracle</span>
-            <span class="skill-tag">Redis Cluster</span>
-            <span class="skill-tag">Kafka/RocketMQ</span>
-            <span class="skill-tag">Docker/K8s</span>
-            <span class="skill-tag">Jenkins CI/CD</span>
-            <span class="skill-tag">React基础</span>
-        </div>
-    </section>
-
-    <!-- 项目案例 -->
-    <section class="section">
-        <h2 class="section-title">重点项目</h2>
-        
-        <div class="job-item">
-            <div class="job-header">
-                <span class="company">基线保全模块重构</span>
-                <span class="duration">2021.04 - 2023.08</span>
-            </div>
-            <ul class="achievement-list">
-                <li>采用DDD分层架构，实现20+保全项（保单终止/退保等）</li>
-                <li>通过Kafka异步解耦核心流程，QPS从500提升至1200</li>
-                <li>获部门年度最佳技术贡献奖</li>
-            </ul>
-        </div>
-
-        <div class="job-item">
-            <div class="job-header">
-                <span class="company">电子文件管理系统</span>
-                <span class="duration">2019.04 - 2019.06</span>
-            </div>
-            <ul class="achievement-list">
-                <li>全栈开发（React+Spring Boot），日均生成PDF文件1万+</li>
-                <li>基于Redis队列优化任务并发，人工操作减少70%</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- 打印按钮 -->
-    <div class="no-print" style="text-align: center; margin-top: 2rem;">
-        <button onclick="window.print()" style="
-            background: var(--secondary-color);
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        ">
-            🖨️ 打印简历
-        </button>
+<div class="stl_ stl_02">
+    <div class="stl_03">
+        <object data="img/img_02.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:49.5833em; height:70.1667em;">
+            <embed src="img/img_02.svg" type="image/svg+xml" />
+        </object>
     </div>
+    <div class="stl_view">
+        <div class="stl_05 stl_06">
+            <div class="stl_01 stl_07" style="left:2em;top:1.8892em;"><span class="stl_08 stl_09 stl_10">吴永志 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:5.4485em;"><span class="stl_11 stl_09 stl_10" style="word-spacing:0em;">男 | 30岁 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:7.0811em;top:5.5413em;"><span class="stl_11 stl_09 stl_10">18941171221 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:14.2012em;top:5.5413em;"><a href="mailto:wyz_woody@163.com" target="_blank"><span class="stl_11 stl_09 stl_12">wyz_woody@163.com &nbsp;</span></a></div>
+            <div class="stl_01 stl_07" style="left:2em;top:7.511em;"><span class="stl_11 stl_09 stl_13" style="word-spacing:0.0031em;">8年工作经验 | 求职意向：Java | 期望薪资：15-20K | 期望城市：大连 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:12.5642em;"><span class="stl_14 stl_09 stl_10">个人优势 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:14.761em;z-index:177;"><span class="stl_15 stl_09 stl_16">1</span><span class="stl_15 stl_09 stl_10">.</span><span class="stl_15 stl_09 stl_17" style="word-spacing:0.0017em;">拥有七年左右的 Java 经验，拥有一定的程序设计能力，保证程序的健壮性，可读性和可扩展性等。能够对各类复杂系统的开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:16.261em;"><span class="stl_15 stl_09 stl_10">和优化。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:17.761em;"><span class="stl_15 stl_09 stl_18" style="word-spacing:0.0014em;">2.熟练使用后台相关框架及中间件，包括：熟悉 SpringCloud、SpringBoot、SpringMVC、MyBaits、Redis、MQ 等 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:19.261em;"><span class="stl_15 stl_09 stl_19">3.熟练使用Idea、Eclipse、SVN、Git、Maven等项目开发及管理工具。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:20.761em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">4.熟练使用 Mysql ，精通 SQL 及其性能优化。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:22.261em;"><span class="stl_15 stl_09 stl_20">5.使用过一段时间React，了解React的基本使用。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:23.761em;"><span class="stl_15 stl_09 stl_10">6.曾参与保险行业复杂需求的分析和实现，拥有一定的需求分析能力以及小项目的负责经验，能够快速把需求转化为实现方案。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:25.261em;z-index:464;"><span class="stl_15 stl_09 stl_21">7</span><span class="stl_15 stl_09 stl_10">.</span><span class="stl_15 stl_09 stl_10">具备出色的问题解决和团队协作能力，能够在团队协作中承担主要作用，推动项目顺利进行并取得良好成果。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:26.761em;"><span class="stl_15 stl_09 stl_10">8.曾获得公司优秀员工荣誉，表现出较高的职业素养和工作热情。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:30.0017em;"><span class="stl_14 stl_09 stl_10">工作经历 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:32.1329em;"><span class="stl_22 stl_09 stl_10">众安（深圳）科技咨询服务有限公司 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:17.377em;top:32.1329em;"><span class="stl_23 stl_09 stl_24">Java开发工程师 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.7959em;top:32.1329em;z-index:33;"><span class="stl_25 stl_09 stl_10">2019</span><span class="stl_25 stl_09 stl_26">.</span><span class="stl_25 stl_09 stl_10">1</span><span class="stl_25 stl_09 stl_10">1-2024.02 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:34.0735em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:35.636em;"><span class="stl_15 stl_09 stl_10">后端理赔，保全等模块开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:37.136em;"><span class="stl_15 stl_09 stl_10">把握小组业务需求，代码开发质量。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:38.636em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">使用 SpringCloudꢀꢁibaba,SpringBoot</span><span class="stl_15 stl_09 stl_10" style="word-spacing:0.257em;">&nbsp;</span><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">等框架，遵循 DDD</span><span class="stl_15 stl_09 stl_10" style="word-spacing:0.257em;">&nbsp;</span><span class="stl_15 stl_09 stl_10">设计思想，完成相关业务代码开发。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:40.136em;"><span class="stl_15 stl_09 stl_10">技术栈: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:41.636em;"><span class="stl_15 stl_09 stl_20">SpringBoot+Mybaits+MySql+Redis+Kafka+OpenFeign+Hystrix+Nacos+SkyWalking+xxl-job &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:43.511em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:45.0735em;"><span class="stl_15 stl_09 stl_10">参与多个国际项目的开发及上线，包括日本，东南亚，欧洲，后期负责一个业务域的业务需求开发和质量把控 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:47.8829em;"><span class="stl_22 stl_09 stl_10">中科软股信息技术（北京）有限公司 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:17.377em;top:47.8829em;"><span class="stl_23 stl_09 stl_28">Java &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.8135em;top:47.8829em;z-index:67;"><span class="stl_25 stl_09 stl_10">201</span><span class="stl_25 stl_09 stl_21">7</span><span class="stl_25 stl_09 stl_10">.</span><span class="stl_25 stl_09 stl_10">08-2019.09 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:49.8235em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:51.386em;"><span class="stl_15 stl_09 stl_10">保险核心新契约相关开发运维 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:52.886em;z-index:783;"><span class="stl_15 stl_09 stl_16">1</span><span class="stl_15 stl_09 stl_10">.</span><span class="stl_15 stl_09 stl_10">银保通数据落地 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:54.386em;"><span class="stl_15 stl_09 stl_10">2.短信预警系统 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:55.886em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">3.华泰E家-APP 在线投保 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:57.386em;"><span class="stl_15 stl_09 stl_10">4.微信前后端分离 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:58.886em;"><span class="stl_15 stl_09 stl_10">5.电子文件生成以及在线管理系统 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:60.761em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:62.3235em;"><span class="stl_15 stl_09 stl_10">2018年度优秀员工 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:65.1329em;"><span class="stl_22 stl_09 stl_10">大连华信 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:67.0735em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:7.0449em;top:65.1329em;"><span class="stl_23 stl_09 stl_28">Java &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.8135em;top:65.1329em;z-index:98;"><span class="stl_25 stl_09 stl_10">2016.07-201</span><span class="stl_25 stl_09 stl_21">7</span><span class="stl_25 stl_09 stl_10">.</span><span class="stl_25 stl_09 stl_10">04 &nbsp;</span></div>
+        </div>
+    </div>
+</div>
+<div class="stl_ stl_02">
+    <div class="stl_03">
+        <object data="img/img_03.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:49.5833em; height:70.1667em;">
+            <embed src="img/img_03.svg" type="image/svg+xml" />
+        </object>
+    </div>
+    <div class="stl_view">
+        <div class="stl_05 stl_06">
+            <div class="stl_01 stl_07" style="left:2em;top:1.386em;z-index:122;"><span class="stl_15 stl_09 stl_16">1</span><span class="stl_15 stl_09 stl_10">.</span><span class="stl_15 stl_09 stl_10">日本项目基于基盘的后台编写及测试 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:2.886em;"><span class="stl_15 stl_09 stl_10">2.日本项目报表生成（VBA） &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:4.386em;"><span class="stl_15 stl_09 stl_29" style="word-spacing:0.0082em;">3.日本项目需求 Java 开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:6.261em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:7.8235em;"><span class="stl_15 stl_09 stl_10">很好的完成了相关的任务开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:10.6329em;"><span class="stl_22 stl_09 stl_10">大连华信 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:12.5736em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:7.0449em;top:10.6329em;"><span class="stl_23 stl_09 stl_28">Java &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.7959em;top:10.6329em;z-index:15;"><span class="stl_25 stl_09 stl_10">2015</span><span class="stl_25 stl_09 stl_26">.</span><span class="stl_25 stl_09 stl_10">1</span><span class="stl_25 stl_09 stl_10">1-2016.07 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:14.1361em;z-index:188;"><span class="stl_15 stl_09 stl_16">1</span><span class="stl_15 stl_09 stl_10">.</span><span class="stl_15 stl_09 stl_10">日本项目基于基盘的后台编写及测试 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:15.6361em;"><span class="stl_15 stl_09 stl_10">2.日本项目报表生成（VBA） &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:17.1361em;"><span class="stl_15 stl_09 stl_29" style="word-spacing:0.0082em;">3.日本项目需求 Java 开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:19.0111em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:20.5736em;"><span class="stl_15 stl_09 stl_10">很好的完成了实习工作，完成了转正 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:23.8142em;"><span class="stl_14 stl_09 stl_10">项目经历 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:25.9454em;"><span class="stl_22 stl_09 stl_10">基线保全模块研发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:10.4893em;top:25.9454em;"><span class="stl_23 stl_09 stl_10">业务域Owner及开发者 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.7598em;top:25.9454em;z-index:49;"><span class="stl_25 stl_09 stl_10">202</span><span class="stl_25 stl_09 stl_16">1</span><span class="stl_25 stl_09 stl_10">.</span><span class="stl_25 stl_09 stl_10">04-2023.08 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:27.8861em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:29.4486em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 保全相关业务需求的开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:30.9486em;"><span class="stl_15 stl_09 stl_10">参与部分保全项的编写：投保人或被保人信息变更，受益人信息变更，保单终止，犹豫期退保，标的变更，特殊约定修改等； &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:32.4486em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 续期续保功能开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:33.9486em;"><span class="stl_15 stl_09 stl_10">续期和续保新业务需求的实现 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:35.4486em;"><span class="stl_15 stl_09 stl_10">续期现有功能的代码重构 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:36.9486em;"><span class="stl_15 stl_09 stl_30" style="word-spacing:0.0018em;">业务需求分析，实现方案设计，Review 相关代码 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:38.4486em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 总结相关业务及系统的相关文档，整理相关业务资产 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:40.3236em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:41.8861em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 完成续期现有代码的重构 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:43.3861em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 续期新需求和续保整体功能的新新增 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:44.8861em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 新保全项业务的实现 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:47.6954em;"><span class="stl_22 stl_09 stl_10">东南亚PFI项目 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:49.6361em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:9.2002em;top:47.6954em;"><span class="stl_23 stl_09 stl_31">Java开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.7598em;top:47.6954em;z-index:86;"><span class="stl_25 stl_09 stl_10">2020.07-202</span><span class="stl_25 stl_09 stl_16">1</span><span class="stl_25 stl_09 stl_10">.</span><span class="stl_25 stl_09 stl_10">03 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:51.1986em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">东南亚 PFI 项目的人人保需求实现 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:52.6986em;"><span class="stl_15 stl_09 stl_10">●类似支付宝的相互保，每个月需要按照参与的人数计算每个人的保费。基于公司基线服务提供险种需求的上线服务 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:54.1986em;"><span class="stl_15 stl_09 stl_10">●参与了项目的需求分析，开发及项目上线 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:56.0736em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:57.6361em;"><span class="stl_15 stl_09 stl_10">高质量，准时的完成了项目上线任务 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:60.4454em;"><span class="stl_22 stl_09 stl_10">后端理赔等模块开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:11.3496em;top:60.4454em;"><span class="stl_23 stl_09 stl_32">后端JAVA开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.7959em;top:60.4454em;z-index:111;"><span class="stl_25 stl_09 stl_10">2019</span><span class="stl_25 stl_09 stl_26">.</span><span class="stl_25 stl_09 stl_10">1</span><span class="stl_25 stl_09 stl_10">1-2020.06 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:62.3861em;"><span class="stl_15 stl_09 stl_10">后端理赔等模块开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:63.8861em;"><span class="stl_15 stl_09 stl_33" style="word-spacing:0.0007em;">开发环境：Spring+SpringBoot+Mybaits+MySql+Redis+SpringCloud 相关 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:65.3861em;"><span class="stl_15 stl_09 stl_34">开发工具：idea+maven+git &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:66.8861em;"><span class="stl_15 stl_09 stl_10">理赔系统的报案，立案，理算，审核等阶段的需求实现 &nbsp;</span></div>
+        </div>
+    </div>
+</div>
+<div class="stl_ stl_02">
+    <div class="stl_03">
+        <object data="img/img_04.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:49.5833em; height:70.1667em;">
+            <embed src="img/img_04.svg" type="image/svg+xml" />
+        </object>
+    </div>
+    <div class="stl_view">
+        <div class="stl_05 stl_06">
+            <div class="stl_01 stl_07" style="left:2em;top:1.3204em;"><span class="stl_22 stl_09 stl_10">电子文件生成以及在线管理系统 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:3.2611em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:15.6553em;top:1.3204em;"><span class="stl_23 stl_09 stl_10">前后端开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.6738em;top:1.3204em;"><span class="stl_25 stl_09 stl_10">2019.07-2019.09 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:4.8236em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">实现电子 PDF 的生成以及提供相关数据配置和任务管理的在线操作网页。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:6.3236em;"><span class="stl_15 stl_09 stl_35">软件环境：Spring+SpringBoot+Mybaits+MySql+Redis+React+DvaJS &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:7.8236em;"><span class="stl_15 stl_09 stl_13">开发工具：Idea+VsCode+Maven+Git &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:9.3236em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 相关功能实现研究以及开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:10.8236em;z-index:275;"><span class="stl_15 stl_09 stl_16">1</span><span class="stl_15 stl_09 stl_10">.</span><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">PDF 文件生成 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:12.3236em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">2.PDF 文件合并 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:13.8236em;"><span class="stl_15 stl_09 stl_35" style="word-spacing:0.0029em;">3.在线管理系统前端 React 页面 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:15.3236em;"><span class="stl_15 stl_09 stl_10">4.在线管理系统后台接口 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:16.8236em;"><span class="stl_15 stl_09 stl_10">5.相关表设计 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:18.6986em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:20.2611em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">实现了根据模板根据数据动态生成 PDF 的功能 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:23.0704em;"><span class="stl_22 stl_09 stl_10">保险云核心系统-微信前后端分离 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:16.04em;top:23.0704em;"><span class="stl_23 stl_09 stl_10">项目小组负责人 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.6738em;top:23.0704em;"><span class="stl_25 stl_09 stl_10">2019.04-2019.06 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:25.0111em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:26.5736em;"><span class="stl_15 stl_09 stl_10">微信端在线投保程序 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:28.0736em;"><span class="stl_15 stl_09 stl_10">在原有提供在线投保接口的基础上进行二次需求开发，实现保费试算，在线投核保，数据落地，保单支付，承保等功能。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:29.5736em;"><span class="stl_15 stl_09 stl_18">软件环境：Spring+SpringBoot+Mybaits+MySql+Redis+ActiveMQ+Docker+Consul+Thrift &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:31.0736em;"><span class="stl_15 stl_09 stl_34">开发工具：Idea+Maven+Git &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:32.5736em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 整个项目的需求分析，设计以及部分开发实施 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:34.4486em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:36.0111em;"><span class="stl_15 stl_09 stl_10">完成了整个项目的需求分析，设计以及部分开发实施 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:38.8205em;"><span class="stl_22 stl_09 stl_10">保险云核心系统-华泰E家 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:13.0879em;top:38.8205em;"><span class="stl_23 stl_09 stl_10">需求分析及开发运维 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:40.6738em;top:38.8205em;"><span class="stl_25 stl_09 stl_10">2018.01-2019.03 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:40.7611em;"><span class="stl_15 stl_09 stl_10">保险系统移动端在线投保APP &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:42.2611em;"><span class="stl_15 stl_09 stl_17">软件环境：Spring+Schema+MySql+Redis+ActiveMQ+Docker+Consul+Thrift &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:43.7611em;"><span class="stl_15 stl_09 stl_34">开发工具：Idea+Maven+Git &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:45.2611em;z-index:649;"><span class="stl_15 stl_09 stl_16" style="word-spacing:0.198em;">1. </span><span class="stl_15 stl_09 stl_10">保</span><span class="stl_15 stl_09 stl_10">单管理相关功能，为前端提供保单相关信息的查询接口以及保单的相关操作接口。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:46.7611em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">2. 人脸对比相关功能，为前端提供在线投保过程中的人脸对比功能接口。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:48.2611em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">3. 电子PDF文件生成功能，实现生成电子投保单，银行转账授权书，保单回执书等电子文件。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:49.7611em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">4. 远程电子签名的功能，为被保人提供远程人脸识别及电子签名功能。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:51.2611em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">5. 部分技术文档编写。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:52.7611em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">6. 部分生产运维支持。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:55.5705em;"><span class="stl_22 stl_09 stl_10">保险云核心系统-短信预警系统 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:57.5111em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:15.1787em;top:55.5705em;"><span class="stl_23 stl_09 stl_10">需求分析及开发 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:41.1982em;top:55.5705em;z-index:143;"><span class="stl_25 stl_09 stl_10">201</span><span class="stl_25 stl_09 stl_21">7</span><span class="stl_25 stl_09 stl_26">.</span><span class="stl_25 stl_09 stl_10">1</span><span class="stl_25 stl_09 stl_10">2-201</span><span class="stl_25 stl_09 stl_21">7</span><span class="stl_25 stl_09 stl_26">.</span><span class="stl_25 stl_09 stl_10">1</span><span class="stl_25 stl_09 stl_10">2 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:59.0736em;"><span class="stl_15 stl_09 stl_10">为系统运行中关键位置可能出现的异常以接口方式提供短信预警服务，及时知晓系统状态，如有问题可及时运维。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:60.5736em;"><span class="stl_15 stl_09 stl_34">软件环境：Spring+Schema+MySql+Redis+ActiveMQ+Docker &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:62.0736em;"><span class="stl_15 stl_09 stl_34">开发工具：Idea+Maven+Git &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:63.5736em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 负责整个预警系统的设计与实施。通过 mq 的方式调用短信信息平台完成预警短信的发送，短信相关信息，如接收人信息内容 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:65.0736em;"><span class="stl_15 stl_09 stl_10">等都在数据库中进行配置。发送过程中同时再数据库中保存发送记录。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:66.9486em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:68.5111em;"><span class="stl_15 stl_09 stl_10">成功继承了短信预警系统，但系统中出现预期问题时，发送短信给相关负责人进行预警 &nbsp;</span></div>
+        </div>
+    </div>
+</div>
+<div class="stl_ stl_02">
+    <div class="stl_03">
+        <object data="img/img_05.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:49.5833em; height:70.1667em;">
+            <embed src="img/img_05.svg" type="image/svg+xml" />
+        </object>
+    </div>
+    <div class="stl_view">
+        <div class="stl_05 stl_06">
+            <div class="stl_01 stl_07" style="left:2em;top:2.6954em;"><span class="stl_22 stl_09 stl_10">保险云核心系统-银保通数据落地 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:4.6361em;"><span class="stl_27 stl_09 stl_10">内容: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:16.04em;top:2.6954em;"><span class="stl_23 stl_09 stl_10">需求分析及开发运维 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:41.0762em;top:2.6954em;z-index:39;"><span class="stl_25 stl_09 stl_10">201</span><span class="stl_25 stl_09 stl_21">7</span><span class="stl_25 stl_09 stl_10">.</span><span class="stl_25 stl_09 stl_10">08-201</span><span class="stl_25 stl_09 stl_21">7</span><span class="stl_25 stl_09 stl_26">.</span><span class="stl_25 stl_09 stl_10">1</span><span class="stl_25 stl_09 stl_10">1 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:6.1986em;"><span class="stl_15 stl_09 stl_10">银保通（银行与保险公司对接系统）：由银行的前端页面进行投保信息的录入，录入后调用保险公司接口进行投保及相关数据落 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:7.6986em;"><span class="stl_15 stl_09 stl_10">地。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:9.1986em;"><span class="stl_15 stl_09 stl_34">软件环境：Spring+Schema+MySql+Redis+ActiveMQ+Docker &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:10.6986em;"><span class="stl_15 stl_09 stl_34">开发工具：Idea+Maven+Git &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:12.1986em;"><span class="stl_15 stl_09 stl_10" style="word-spacing:0em;">● 负责投保相关数据落地，使用 Mq 消息队列异步完成数据落地。 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:14.0736em;"><span class="stl_27 stl_09 stl_10">业绩: &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:15.6361em;"><span class="stl_15 stl_09 stl_10">共同完成了新需求的开发及上线 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:18.8767em;"><span class="stl_14 stl_09 stl_10">教育经历 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:2em;top:21.0079em;"><span class="stl_22 stl_09 stl_10">齐齐哈尔大学 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:8.7666em;top:21.0079em;"><span class="stl_23 stl_09 stl_10">本科 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:12.0898em;top:21.0079em;"><span class="stl_23 stl_09 stl_10">软件工程 &nbsp;</span></div>
+            <div class="stl_01 stl_07" style="left:43.2148em;top:21.0079em;"><span class="stl_25 stl_09 stl_10">2012-2016 &nbsp;</span></div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
