@@ -5,38 +5,291 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>吴永志 - Java开发工程师</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-        h1 { color: #333; }
-        h2 { color: #555; }
-        a { color: #007BFF; text-decoration: none; }
-        .section { margin-bottom: 30px; }
+        /* 基础样式 */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            background-color: #f8f9fa;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        /* 打印样式 */
+        @media print {
+            body {
+                padding: 0;
+                font-size: 12pt;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* 头部样式 */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .name {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .position {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        /* 核心信息栏 */
+        .info-bar {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            background: #f0f3f5;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* 主要内容模块 */
+        .section {
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        /* 工作经历模块 */
+        .job-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .duration {
+            color: #7f8c8d;
+        }
+
+        .tech-stack {
+            margin: 0.5rem 0;
+            font-style: italic;
+            color: #95a5a6;
+        }
+
+        .achievement-list {
+            list-style: none;
+        }
+
+        .achievement-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .achievement-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        /* 技能标签 */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #ecf0f1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .info-item {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>吴永志</h1>
-        <p>Java开发工程师 | 8年经验 | 期望薪资：15-20K | 大连</p>
-        <p>📱 18941171221 | 📧 wyz_woody@163.com</p>
+    <header class="header">
+        <h1 class="name">吴永志</h1>
+        <div class="position">Java开发工程师 | 8年全栈经验</div>
+        <div class="info-bar">
+            <div class="info-item">
+                📱 189-4117-1221
+            </div>
+            <div class="info-item">
+                📧 wyz_woody@163.com
+            </div>
+            <div class="info-item">
+                🌏 期望城市：大连
+            </div>
+            <div class="info-item">
+                💰 期望薪资：15-20K
+            </div>
+        </div>
     </header>
 
+    <!-- 核心优势 -->
     <section class="section">
-        <h2>核心优势</h2>
-        <ul>
-            <li>8年全栈Java开发经验，精通Spring生态、MySQL优化、分布式中间件。</li>
-            <li>保险领域专家，主导多个跨国项目成功上线。</li>
-            <li>擅长高并发系统优化，代码重构提升性能30%+。</li>
+        <h2 class="section-title">核心优势</h2>
+        <ul class="achievement-list">
+            <li>8年全栈开发经验，精通Spring生态（Boot/Cloud）、分布式中间件（Redis/Kafka/Nacos）</li>
+            <li>主导3个跨国项目（日本/东南亚/欧洲）交付，需求转化效率提升40%</li>
+            <li>擅长高并发优化，通过代码重构实现系统响应时间降低25%+</li>
+            <li>保险领域专家，具备DDD设计与复杂业务系统架构能力</li>
         </ul>
     </section>
 
+    <!-- 工作经历 -->
     <section class="section">
-        <h2>工作经历</h2>
-        <h3>众安（深圳）科技咨询服务有限公司 | Java开发工程师 | 2019.11-2024.02</h3>
-        <ul>
-            <li>主导保险核心系统开发，优化续期续保逻辑，系统响应时间降低25%。</li>
-            <li>负责东南亚PFI项目需求分析及开发，准时上线并获客户好评。</li>
-        </ul>
+        <h2 class="section-title">工作经历</h2>
+        
+        <div class="job-item">
+            <div class="job-header">
+                <span class="company">众安科技（深圳）</span>
+                <span class="duration">2019.11 - 2024.02</span>
+            </div>
+            <div class="tech-stack">技术栈：Spring Cloud Alibaba/MyBatis/Redis/Kafka/MySQL</div>
+            <ul class="achievement-list">
+                <li>主导保险核心系统开发，重构续期续保模块，代码复用率提升40%</li>
+                <li>设计东南亚PFI项目保费计算引擎，支持每月50万+用户动态核算</li>
+                <li>引入SkyWalking实现全链路监控，故障排查效率提升60%</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-header">
+                <span class="company">中科软股（北京）</span>
+                <span class="duration">2017.08 - 2019.09</span>
+            </div>
+            <div class="tech-stack">技术栈：Spring Boot/ActiveMQ/MySQL/Redis</div>
+            <ul class="achievement-list">
+                <li>开发"华泰E家"APP，集成人脸识别/电子签名功能，日活用户突破10万</li>
+                <li>设计异步短信预警系统，异常响应时效从小时级降至分钟级</li>
+                <li>2018年度优秀员工（TOP 5%）</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- 其他部分省略 -->
+    <!-- 技术能力 -->
+    <section class="section">
+        <h2 class="section-title">技术能力</h2>
+        <div class="skill-tags">
+            <span class="skill-tag">Java 8/11</span>
+            <span class="skill-tag">Spring Boot/Cloud</span>
+            <span class="skill-tag">MySQL/Oracle</span>
+            <span class="skill-tag">Redis Cluster</span>
+            <span class="skill-tag">Kafka/RocketMQ</span>
+            <span class="skill-tag">Docker/K8s</span>
+            <span class="skill-tag">Jenkins CI/CD</span>
+            <span class="skill-tag">React基础</span>
+        </div>
+    </section>
+
+    <!-- 项目案例 -->
+    <section class="section">
+        <h2 class="section-title">重点项目</h2>
+        
+        <div class="job-item">
+            <div class="job-header">
+                <span class="company">基线保全模块重构</span>
+                <span class="duration">2021.04 - 2023.08</span>
+            </div>
+            <ul class="achievement-list">
+                <li>采用DDD分层架构，实现20+保全项（保单终止/退保等）</li>
+                <li>通过Kafka异步解耦核心流程，QPS从500提升至1200</li>
+                <li>获部门年度最佳技术贡献奖</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-header">
+                <span class="company">电子文件管理系统</span>
+                <span class="duration">2019.04 - 2019.06</span>
+            </div>
+            <ul class="achievement-list">
+                <li>全栈开发（React+Spring Boot），日均生成PDF文件1万+</li>
+                <li>基于Redis队列优化任务并发，人工操作减少70%</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 打印按钮 -->
+    <div class="no-print" style="text-align: center; margin-top: 2rem;">
+        <button onclick="window.print()" style="
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        ">
+            🖨️ 打印简历
+        </button>
+    </div>
 </body>
 </html>
