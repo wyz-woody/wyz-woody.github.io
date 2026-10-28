@@ -1,0 +1,17 @@
+
+:
+
+index.html,f\6\f6013a00b362253c64368d6eebc50ea2131754e2
+9
+	style.css,4\6\46e3381e9569c09e85a30b9e5a2af7525ee9fd78
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+>
+img/img_02.svg,5\2\524b693e6ddc3a3d28e9f79825e2b0e68e5eb56a
+>
+img/img_04.svg,f\8\f874e19c6816fdf976f8a1d5bc21bdbe45479d4b
+>
+img/img_03.svg,c\9\c9ac93e87948598cac50478ef8d3f41908b34964
+>
+img/img_05.svg,2\c\2c212ae3979b47a6410b9297970164f4ab8892c3
