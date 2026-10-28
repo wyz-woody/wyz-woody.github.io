@@ -782,6 +782,40 @@ main {
     color: #3d5a86;
 }
 
+.company {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 1px 8px;
+    border-radius: 5px;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.company::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.c-za {
+    background: #eef4ff;
+    color: #1f5bd8;
+}
+
+.c-zks {
+    background: #e9f7f1;
+    color: #0f8a5f;
+}
+
+.c-hx {
+    background: #f3eefe;
+    color: #7a4fd0;
+}
+
 .project-index {
     flex: none;
     font-size: 21px;
